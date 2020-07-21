@@ -16,19 +16,8 @@ I started this course to get basic knowledge about React. I gathered knowledge a
 ## What I have learned during app creation
 
 - React (written on the 16.13.1 version) [Create React App](https://github.com/facebook/create-react-app)
-- [JSX](#jsx)
+- JSX
 - Virtual DOM
-
-## My Notes from course
-
-### JSX
-
-JSX are basicly extension of JavaScript syntax with the possibility of inserting HTML tags.
-Without JSX we would have to use React.createElement() method and pass:<br />
-element eg. `h1`<br />
-props eg. `className`<br />
-...children eg. `Hello World`<br />
-Horror!
 
 ## Setup
 
