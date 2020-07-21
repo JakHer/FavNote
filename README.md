@@ -21,13 +21,13 @@ I started this course to get basic knowledge about React. I gathered knowledge a
 
 ## My Notes from course
 
-### jsx
+### JSX
 
 JSX are basicly extension of JavaScript syntax with the possibility of inserting HTML tags.
-Without JSX we would have to use React.createElement() method and pass:
-element eg. `h1`
-props eg. `className`
-...children eg. `Hello World`
+Without JSX we would have to use React.createElement() method and pass:<br />
+element eg. `h1`<br />
+props eg. `className`<br />
+...children eg. `Hello World`<br />
 Horror!
 
 ## Setup
