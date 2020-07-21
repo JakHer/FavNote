@@ -6,7 +6,7 @@
 - [What I have learned during app creation](#what-i-have-learned-during-app-creation)
 - [Setup](#setup)
 
-### About
+## About
 
 I started this course to get basic knowledge about React
 
@@ -25,6 +25,8 @@ $ cd ../fav-note
 $ npm install
 $ npm start
 
+```
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
@@ -32,5 +34,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+```
 
 ```
