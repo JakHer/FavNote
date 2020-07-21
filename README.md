@@ -1,5 +1,7 @@
 # React course from scratch
 
+> To refresh and organize knowledge about React library.
+
 ## What I have learned from this app
 
 - [General info](#about)
@@ -24,7 +26,6 @@ To run this project, install it locally using npm:
 $ cd ../fav-note
 $ npm install
 $ npm start
-
 ```
 
 ### `npm start`
