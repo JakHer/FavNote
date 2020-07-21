@@ -1,8 +1,20 @@
-## React course from scratch
+# React course from scratch
 
-### `About`
+## What I have learned from this app
+
+- [General info](#about)
+- [What I have learned during app creation](#what-i-have-learned-during-app-creation)
+- [Setup](#setup)
+
+### About
 
 I started this course to get basic knowledge about React
+
+## What I have learned during app creation
+
+- React 16.13.1
+- JSX
+- Virtual DOM
 
 ## Setup
 
