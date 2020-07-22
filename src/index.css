@@ -22,7 +22,3 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
-.list {
-  padding: 10px;
-}

@@ -1,11 +1,12 @@
 .list__item {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  margin: 30px 0;
+  padding: 0 0 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgba(30, 88, 255, 0.15);
 }
 
 @media screen and (max-width: 1000px) {
@@ -18,13 +19,13 @@
   max-height: 150px;
   max-width: 150px;
   margin: 0 40px 0 0;
-
+  flex-shrink: 0;
   border-radius: 50%;
 }
 
 @media screen and (max-width: 1000px) {
   .list__image {
-    margin: 0 0 10px 0;
+    margin: 0 0 5px;
   }
 }
 
@@ -45,17 +46,39 @@
   font-weight: 700;
 }
 
+@media screen and (max-width: 1000px) {
+  .list__header {
+    margin: 7px 0;
+  }
+}
+
 .list__description {
   color: grey;
   font-weight: 300;
-  max-width: 400px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+  .list__description {
+    margin: 7px 0;
+  }
 }
 
 .list__button {
-  color: #1e58ff;
   max-width: 150px;
   border: 2px solid #1e58ff;
   font-weight: 500;
   background: none;
   padding: 7px 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .list__button {
+    margin: 7px 0;
+  }
+}
+
+.list__link {
+  color: #1e58ff;
+  text-decoration: none;
 }

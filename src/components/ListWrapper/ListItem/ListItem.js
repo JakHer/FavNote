@@ -1,17 +1,22 @@
 import React from "react";
 import "./ListItem.css";
-import ryanFlorenceImage from "../../../assets/images/ryanflorence.jpg";
 
-const ListItem = () => (
+const ListItem = (props) => (
   <li className="list__item">
-    <img className="list__image" alt="Ryan Florence" src={ryanFlorenceImage} />
+    <img className="list__image" alt="Ryan Florence" src={props.imageSrc} />
     <div className="list__container">
-      <h2 className="list__header">Ryan Florence</h2>
-      <p className="list__description">
-        Making React accessible for users and developers at https://reach.tech .
-        Online learning, workshops, OSS, and consulting.
-      </p>
-      <button className="list__button">visit twitter page</button>
+      <h2 className="list__header">{props.name}</h2>
+      <p className="list__description">{props.description}</p>
+      <button className="list__button">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="list__link"
+          href={props.twitterLink}
+        >
+          visit twitter page
+        </a>
+      </button>
     </div>
   </li>
 );
