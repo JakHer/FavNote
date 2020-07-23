@@ -2,14 +2,22 @@ import React from "react";
 
 class MyComponent extends React.Component {
   state = {
-    text: "test state",
+    text: "TEST STATE",
   };
-  handleChange = () => console.log(this.state.text);
+
+  handleChange = (e) => {
+    this.setState({ text: e.target.value.toUpperCase() });
+  };
+
   render() {
     return (
       <>
         <h1>{this.state.text}</h1>
-        <input placeholder="Enter text" onChange={this.handleChange} />
+        <input
+          placeholder="Enter text"
+          onChange={this.handleChange}
+          value={this.state.text}
+        />
       </>
     );
   }
