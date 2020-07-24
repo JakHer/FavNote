@@ -1,18 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
-const HooksComponent = () => {
-  const [text, setText] = useState("Test");
-
-  return (
-    <>
-      <h1>{text}</h1>
-      <input
-        placeholder="Enter text"
-        onChange={(e) => setText(e.target.value)}
-        value={text}
-      />
-    </>
-  );
-};
+const HooksComponent = (props) => (
+  <>
+    <h1>{props.name}</h1>
+    <input
+      placeholder="Enter text"
+      value={props.name}
+      onChange={props.handleChange}
+    />
+  </>
+);
 
 export default HooksComponent;

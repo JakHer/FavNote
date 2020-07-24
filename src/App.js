@@ -2,7 +2,7 @@ import React from "react";
 import ListWrapper from "./components/ListWrapper";
 import "./index.css";
 import Form from "./components/Form/Form";
-// import HooksComponent from "./components/ListWrapper/HooksComponent/HooksComponent";
+import HooksComponent from "./components/ListWrapper/HooksComponent/HooksComponent";
 
 const initialStateItems = [
   {
@@ -41,6 +41,11 @@ const initialStateItems = [
 class App extends React.Component {
   state = {
     items: [...initialStateItems],
+    greeting: "Kuba",
+  };
+
+  handleChange = (e) => {
+    this.setState({ greeting: e.target.value });
   };
 
   addItem = (e) => {
@@ -54,6 +59,10 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <HooksComponent
+          name={this.state.greeting}
+          handleChange={this.handleChange}
+        />
         <ListWrapper items={this.state.items} />
         <Form submitFn={this.addItem} />
       </>
