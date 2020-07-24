@@ -2,7 +2,7 @@ import React from "react";
 import ListWrapper from "./components/ListWrapper";
 import "./index.css";
 import Form from "./components/Form/Form";
-import HooksComponent from "./components/ListWrapper/HooksComponent/HooksComponent";
+// import HooksComponent from "./components/ListWrapper/HooksComponent/HooksComponent";
 
 const initialStateItems = [
   {
@@ -58,8 +58,15 @@ class App extends React.Component {
       description: e.target[3].value,
     };
 
+    console.log(
+      e.target[0].value,
+      e.target[1].value,
+      e.target[2].value,
+      e.target[3].value
+    );
+
     this.setState((prevState) => ({
-      items: [prevState, newItem],
+      items: [...prevState.items, newItem],
     }));
 
     e.target.reset();
@@ -68,10 +75,6 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <HooksComponent
-          name={this.state.greeting}
-          handleChange={this.handleChange}
-        />
         <ListWrapper items={this.state.items} />
         <Form submitFn={this.addItem} />
       </>
