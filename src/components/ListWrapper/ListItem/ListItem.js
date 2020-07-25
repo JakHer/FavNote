@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from "../../Button/Button.js";
+import Heading from "../../Heading/Heading.js";
 import styles from "./ListItem.module.scss";
 
 const ListItem = ({ name, description, image, twitterLink }) => {
@@ -13,16 +15,16 @@ const ListItem = ({ name, description, image, twitterLink }) => {
         src={image}
       />
       <div className={styles.list__container}>
-        <h2 className={styles.list__header}>{name}</h2>
+        <Heading>{name}</Heading>
         <p className={styles.list__description}>{description}</p>
-        <a
+        <Button
           target="_blank"
           rel="noopener noreferrer"
           className={styles.list__link}
           href={twitterLink}
         >
           visit twitter page
-        </a>
+        </Button>
       </div>
     </li>
   );

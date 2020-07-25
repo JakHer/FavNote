@@ -1,0 +1,9 @@
+.heading {
+  color: rgba(30, 88, 255, 1);
+  margin: 0;
+  font-weight: 700;
+
+  @media screen and (max-width: 1000px) {
+    margin: 7px 0;
+  }
+}
