@@ -4,16 +4,16 @@ import styles from "./Form.module.scss";
 const Form = ({ submitFn }) => (
   <div className={styles.form__wrapper}>
     <h2 className={styles.form__heading}>Add new twitter account</h2>
-    <form className={styles.form} onSubmit={submitFn}>
+    <form className={styles.form} autoComplete="off" onSubmit={submitFn}>
       <div className={styles.form__item}>
         <input
-          autoComplete="off"
           type="text"
           id="name"
           name="name"
           placeholder=" "
           maxLength="30"
           className={styles.form__input}
+          required
         />
         <label className={styles.form__label} htmlFor="name">
           Name
@@ -22,12 +22,12 @@ const Form = ({ submitFn }) => (
       </div>
       <div className={styles.form__item}>
         <input
-          autoComplete="off"
           className={styles.form__input}
           type="text"
           id="link"
           name="link"
           placeholder=" "
+          required
         />
         <label className={styles.form__label} htmlFor="link">
           Link
@@ -36,7 +36,6 @@ const Form = ({ submitFn }) => (
       </div>
       <div className={styles.form__item}>
         <input
-          autoComplete="off"
           className={styles.form__input}
           type="text"
           id="image"
@@ -55,6 +54,7 @@ const Form = ({ submitFn }) => (
           id="description"
           name="description"
           placeholder=" "
+          required
         />
         <label className={styles.form__label} htmlFor="description">
           Description

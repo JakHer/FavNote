@@ -1,9 +1,9 @@
 import React from "react";
 import ListItem from "./ListWrapper/ListItem/ListItem";
-import "./ListWrapper.css";
+import styles from "./ListWrapper.module.scss";
 
 const ListWrapper = (props) => (
-  <ul className="list">
+  <ul className={styles.list}>
     {props.items.map((item) => (
       <ListItem key={item.twitterLink} {...item} />
     ))}

@@ -1,20 +1,19 @@
 import React from "react";
 import ListWrapper from "./components/ListWrapper";
-import "./index.css";
 import Form from "./components/Form/Form";
 // import HooksComponent from "./components/ListWrapper/HooksComponent/HooksComponent";
 
 const initialStateItems = [
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/240px-React-icon.svg.png",
+      "https://pbs.twimg.com/profile_images/1268663650832744449/-jmtfbqQ_400x400.jpg",
     name: "Dan Abramov",
     description: "Working on @reactjs. The demo guy.",
     twitterLink: "https://twitter.com/dan_abramov",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/240px-React-icon.svg.png",
+      "https://pbs.twimg.com/profile_images/1257111841508974592/2_rEXazl_400x400.jpg",
     name: "Ryan Florence",
     description:
       "Making React accessible for users and developers at https://reach.tech . Online learning, workshops, OSS, and consulting.",
@@ -22,7 +21,7 @@ const initialStateItems = [
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/240px-React-icon.svg.png",
+      "https://avatars1.githubusercontent.com/u/92839?s=460&u=2727b5ab382f6b2f3be84a257c2dcdc50243d78f&v=4",
     name: "Michael Jackson",
     description:
       "Maker. Co-author of React Router. Working on @ReactTraining. Created @unpkg. Head over heels for @cari.",
@@ -30,7 +29,7 @@ const initialStateItems = [
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/240px-React-icon.svg.png",
+      "https://pbs.twimg.com/profile_images/759557613445001216/6M2E1l4q_400x400.jpg",
     name: "Kent C. Dodds",
     description:
       "Making software development more accessible · Husband, Father, Latter-day Saint, Teacher, OSS, GDE, @TC39 · @PayPalEng @eggheadio @FrontendMasters · #JS",
@@ -57,13 +56,6 @@ class App extends React.Component {
       image: e.target[2].value,
       description: e.target[3].value,
     };
-
-    console.log(
-      e.target[0].value,
-      e.target[1].value,
-      e.target[2].value,
-      e.target[3].value
-    );
 
     this.setState((prevState) => ({
       items: [...prevState.items, newItem],
