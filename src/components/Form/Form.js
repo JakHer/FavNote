@@ -1,66 +1,20 @@
 import React from "react";
+import Input from "../Input/Input.js";
 import styles from "./Form.module.scss";
 
 const Form = ({ submitFn }) => (
   <div className={styles.form__wrapper}>
     <h2 className={styles.form__heading}>Add new twitter account</h2>
     <form className={styles.form} autoComplete="off" onSubmit={submitFn}>
-      <div className={styles.form__item}>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder=" "
-          maxLength="30"
-          className={styles.form__input}
-          required
-        />
-        <label className={styles.form__label} htmlFor="name">
-          Name
-        </label>
-        <div className={styles.form__itemBar}></div>
-      </div>
-      <div className={styles.form__item}>
-        <input
-          className={styles.form__input}
-          type="text"
-          id="link"
-          name="link"
-          placeholder=" "
-          required
-        />
-        <label className={styles.form__label} htmlFor="link">
-          Link
-        </label>
-        <div className={styles.form__itemBar}></div>
-      </div>
-      <div className={styles.form__item}>
-        <input
-          className={styles.form__input}
-          type="text"
-          id="image"
-          name="image"
-          placeholder=" "
-        />
-        <label className={styles.form__label} htmlFor="image">
-          Image
-        </label>
-        <div className={styles.form__itemBar}></div>
-      </div>
-      <div className={styles.form__item}>
-        <textarea
-          className={styles.form__textarea}
-          type="text"
-          id="description"
-          name="description"
-          placeholder=" "
-          required
-        />
-        <label className={styles.form__label} htmlFor="description">
-          Description
-        </label>
-        <div className={styles.form__itemBar}></div>
-      </div>
+      <Input name="name" label="Name" maxLength={30} />
+      <Input name="link" label="Twitter Link" />
+      <Input name="image" label="Image" />
+      <Input
+        tag="textarea"
+        name="description"
+        label="Description"
+        maxLength={30}
+      />
 
       <button type="submit" className={styles.form__button}>
         add new item
