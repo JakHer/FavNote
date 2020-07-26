@@ -28,6 +28,7 @@ I started this course to get basic knowledge about React. I gathered knowledge a
 - Css Modules & SCSS
 - BEM Convention
 - Conditional Rendering
+- React Router
 
 ## Setup
 

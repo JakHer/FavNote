@@ -1,16 +1,23 @@
 .form {
   width: 100%;
   max-width: 350px;
+  margin: 20px auto 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 
+  @media screen and (max-width: 1000px) {
+    margin: 10px auto 0;
+    max-width: 76vw;
+  }
+
   &__wrapper {
-    width: 50%;
+    width: 100%;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 50px auto 100px;
+    position: relative;
   }
 }

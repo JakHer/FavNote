@@ -6,6 +6,12 @@
   &__form {
     @extend .heading;
     margin: 15px 0;
+
+    @media screen and (max-width: 1000px) {
+      margin: 7px 0;
+      padding: 0 10px;
+      text-align: center;
+    }
   }
 
   @media screen and (max-width: 1000px) {
