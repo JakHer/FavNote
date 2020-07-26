@@ -3,6 +3,11 @@
   margin: 0;
   font-weight: 700;
 
+  &__form {
+    @extend .heading;
+    margin: 15px 0;
+  }
+
   @media screen and (max-width: 1000px) {
     margin: 7px 0;
   }
