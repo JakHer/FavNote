@@ -6,7 +6,6 @@
 
 - [General info](#about)
 - [What I have learned during app creation](#what-i-have-learned-during-app-creation)
-- [My Notes from course](#my-notes-from-course)
 - [Setup](#setup)
 
 ## About
@@ -18,6 +17,17 @@ I started this course to get basic knowledge about React. I gathered knowledge a
 - React (written on the 16.13.1 version) [Create React App](https://github.com/facebook/create-react-app)
 - JSX
 - Virtual DOM
+- Difference class component and functional component (statefull vs stateless component)
+- Export Default vs Named export
+- When to use explicit return
+- Props (passing props)
+- Array Mapping (spread operator, map function)
+- PropTypes (data types validation)
+- Getting data from children components
+- Adding new list item as fucntion passed in props
+- Css Modules & SCSS
+- BEM Convention
+- Conditional Rendering
 
 ## Setup
 
