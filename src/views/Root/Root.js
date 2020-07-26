@@ -1,4 +1,8 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import ArticlesView from "../ArticlesView/ArticlesView";
+import NotesView from "../NotesView/NotesView";
+import TwittersView from "../TwittersView/TwittersView";
 import "./index.css";
 
 const initialStateItems = [
@@ -64,9 +68,13 @@ class Root extends React.Component {
 
   render() {
     return (
-      <>
-        <h1>Hello World!</h1>
-      </>
+      <BrowserRouter>
+        <>
+          <Route exact path="/" component={TwittersView} />
+          <Route path="/articles" component={ArticlesView} />
+          <Route path="/notes" component={NotesView} />
+        </>
+      </BrowserRouter>
     );
   }
 }
