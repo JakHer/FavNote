@@ -1,0 +1,20 @@
+.nav {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__Link {
+    text-decoration: none;
+    color: #818181;
+    text-transform: lowercase;
+  }
+
+  &__LinkActive {
+    font-weight: 700;
+  }
+}
