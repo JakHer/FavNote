@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./Navigation.module.scss";
+import styles from "./HeaderNavigation.module.scss";
 
-const Navigation = () => (
+const HeaderNavigation = () => (
   <nav className={styles.nav}>
     <ul className={styles.nav__list}>
       <li className={styles.nav__item}>
@@ -24,11 +24,7 @@ const Navigation = () => (
           articles
         </NavLink>
       </li>
-      <li
-        activeClassName={styles.nav__LinkActive}
-        className={styles.nav__item}
-        to="/notes"
-      >
+      <li className={styles.nav__item} to="/notes">
         <NavLink
           activeClassName={styles.nav__LinkActive}
           className={styles.nav__Link}
@@ -41,4 +37,4 @@ const Navigation = () => (
   </nav>
 );
 
-export default Navigation;
+export default HeaderNavigation;
