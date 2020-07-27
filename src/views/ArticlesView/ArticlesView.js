@@ -3,7 +3,7 @@ import AppContext from "../../context";
 
 const ArticlesView = () => (
   <AppContext.Consumer>
-    {(context) => <p>Articles View {context}</p>}
+    {(context) => <p>Articles View {context.name}</p>}
   </AppContext.Consumer>
 );
 
