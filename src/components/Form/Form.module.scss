@@ -24,4 +24,11 @@
       margin: 50px auto 0;
     }
   }
+
+  &__radioWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
