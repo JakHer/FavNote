@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-const Button = ({ children, href, secondary }) => {
-  const buttonClass = secondary ? styles.button__secondary : styles.button;
-
+const Button = ({ children, href, secondary, modal, ...props }) => {
   return (
     <>
       {href ? (
@@ -16,7 +14,18 @@ const Button = ({ children, href, secondary }) => {
           {children}
         </a>
       ) : (
-        <button className={buttonClass}>{children}</button>
+        <button
+          {...props}
+          className={
+            secondary
+              ? styles.button__secondary
+              : modal
+              ? styles.button__modal
+              : styles.button
+          }
+        >
+          {children}
+        </button>
       )}
     </>
   );

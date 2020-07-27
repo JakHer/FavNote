@@ -4,11 +4,13 @@ import Button from "../Button/Button";
 import Logo from "../../assets/images/logo.svg";
 import styles from "./Header.module.scss";
 
-const Header = () => (
+const Header = ({ openModalFn }) => (
   <header className={styles.header}>
     <img className={styles.header__img} src={Logo} alt="favnote logo" />
     <HeaderNavigation />
-    <Button secondary>new item</Button>
+    <Button secondary onClick={openModalFn}>
+      new item
+    </Button>
   </header>
 );
 

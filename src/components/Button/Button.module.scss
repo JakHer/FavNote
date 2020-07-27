@@ -26,6 +26,12 @@
   color: #1e58ff;
   cursor: pointer;
 
+  margin: 50px 0 0;
+
+  @media screen and (max-width: 1000px) {
+    margin: 20px 0 0;
+  }
+
   &__secondary {
     @extend .button;
     background: #1e58ff;
@@ -46,6 +52,19 @@
       right: 10px;
       bottom: 15px;
     }
+  }
+
+  &__modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    background: #1e58ff;
+    color: #fff;
+    border: none;
+    padding: 7px 12px;
+    cursor: pointer;
+    margin: 10px;
   }
 
   &__form {
