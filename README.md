@@ -29,6 +29,7 @@ I started this course to get basic knowledge about React. I gathered knowledge a
 - BEM Convention
 - Conditional Rendering
 - React Router
+- Context API
 
 ## Setup
 
