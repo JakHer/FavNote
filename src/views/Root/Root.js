@@ -44,7 +44,7 @@ const initialStateItems = [
 class Root extends React.Component {
   state = {
     items: [...initialStateItems],
-    isModalOpen: true,
+    isModalOpen: false,
   };
 
   addItem = (e) => {
