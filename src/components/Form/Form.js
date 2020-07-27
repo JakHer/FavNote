@@ -30,14 +30,15 @@ class Form extends Component {
 
   render() {
     const { submitFn } = this.props;
+    const { activeOption } = this.state;
     return (
       <div className={styles.form__wrapper}>
-        <Heading form>Add new {DESCRIPTIONS[this.state.activeOption]}</Heading>
+        <Heading form>Add new {DESCRIPTIONS[activeOption]}</Heading>
         <form className={styles.form} autoComplete="off" onSubmit={submitFn}>
           <div className={styles.form__radioWrapper}>
             <Radio
               id={TYPES.twitter}
-              checked={this.state.activeOption === TYPES.twitter}
+              checked={activeOption === TYPES.twitter}
               changeFn={() => this.handleRadioChange(TYPES.twitter)}
               htmlFor={TYPES.twitter}
             >
@@ -45,7 +46,7 @@ class Form extends Component {
             </Radio>
             <Radio
               id={TYPES.article}
-              checked={this.state.activeOption === TYPES.article}
+              checked={activeOption === TYPES.article}
               changeFn={() => this.handleRadioChange(TYPES.article)}
               htmlFor={TYPES.article}
             >
@@ -53,22 +54,36 @@ class Form extends Component {
             </Radio>
             <Radio
               id={TYPES.note}
-              checked={this.state.activeOption === TYPES.note}
+              checked={activeOption === TYPES.note}
               changeFn={() => this.handleRadioChange(TYPES.note)}
               htmlFor={TYPES.note}
             >
               {TYPES.note}
             </Radio>
           </div>
-          <Input name="name" label="Name" maxLength={30} />
-          <Input name="link" label="Twitter Link" />
-          <Input name="image" label="Image" />
+          <Input
+            name="name"
+            label={activeOption === TYPES.twitter ? "Twitter Name" : "Title"}
+            maxLength={30}
+          />
+          {activeOption === TYPES.twitter ? (
+            <Input name="image" label="Image" />
+          ) : null}
+
+          {activeOption !== TYPES.note ? (
+            <Input
+              name="link"
+              label={activeOption === TYPES.twitter ? "Twitter Link" : "Link"}
+            />
+          ) : null}
+
           <Input
             tag="textarea"
             name="description"
             label="Description"
             maxLength={30}
           />
+
           <Button>add new item</Button>
         </form>
       </div>
