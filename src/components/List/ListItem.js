@@ -17,7 +17,13 @@ const ListItem = ({ title, description, image, link, type }) => {
         )
       ) : null}
 
-      <div className={styles.list__container}>
+      <div
+        className={
+          type === "twitter"
+            ? styles.list__container
+            : styles.list__containerEmpty
+        }
+      >
         <Heading>{title}</Heading>
         <p className={styles.list__description}>{description}</p>
         {type === "twitter" || type === "article" ? (
