@@ -21,12 +21,29 @@ const DESCRIPTIONS = {
 class Form extends Component {
   state = {
     activeOption: TYPES.twitter,
+    title: ``,
+    link: ``,
+    image: ``,
+    description: ``,
   };
 
   handleRadioChange = (type) => {
     this.setState({
       activeOption: type,
     });
+  };
+
+  handleInputChange = (e) => {
+    console.log(e.target.name);
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+    console.log(`
+    title: ${this.state.title},
+    description: ${this.state.description},
+    link: ${this.state.link},
+    image: ${this.state.image},
+    `);
   };
 
   render() {
@@ -68,18 +85,27 @@ class Form extends Component {
                 </Radio>
               </div>
               <Input
-                name="name"
+                onChange={this.handleInputChange}
+                value={this.state.title}
+                name="title"
                 label={
                   activeOption === TYPES.twitter ? "Twitter Name" : "Title"
                 }
                 maxLength={30}
               />
               {activeOption === TYPES.twitter ? (
-                <Input name="image" label="Image" />
+                <Input
+                  onChange={this.handleInputChange}
+                  value={this.state.image}
+                  name="image"
+                  label="Image"
+                />
               ) : null}
 
               {activeOption !== TYPES.note ? (
                 <Input
+                  onChange={this.handleInputChange}
+                  value={this.state.link}
                   name="link"
                   label={
                     activeOption === TYPES.twitter ? "Twitter Link" : "Link"
@@ -88,6 +114,8 @@ class Form extends Component {
               ) : null}
 
               <Input
+                onChange={this.handleInputChange}
+                value={this.state.description}
                 tag="textarea"
                 name="description"
                 label="Description"

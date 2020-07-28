@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Input.module.scss";
 
-const Input = ({ tag: Tag, name, maxLength, label, required }) => (
+const Input = ({ tag: Tag, name, maxLength, label, required, ...props }) => (
   <div className={styles.form__item}>
     <Tag
+      {...props}
       type="text"
       id={name}
       name={name}
