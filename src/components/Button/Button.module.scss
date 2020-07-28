@@ -8,7 +8,8 @@
   font-size: 12px;
   margin: 7px 0;
   text-align: center;
-  max-width: 150px;
+  max-width: 130px;
+  min-width: 130px;
   cursor: pointer;
 
   @media screen and (max-width: 1000px) {

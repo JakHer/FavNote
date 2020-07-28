@@ -4,41 +4,44 @@ import Button from "../Button/Button";
 import Heading from "../Heading/Heading.js";
 import styles from "./ListItem.module.scss";
 
-const ListItem = ({ name, description, image, twitterLink }) => {
+const ListItem = ({ title, description, image, link }) => {
   const ImageTag = image ? "img" : "div";
 
   return (
     <li className={styles.list__item}>
-      <ImageTag
-        className={image ? styles.list__image : styles.list__imageNone}
-        alt={name}
-        src={image}
-      />
+      {image ? (
+        <ImageTag className={styles.list__image} alt={title} src={image} />
+      ) : (
+        <ImageTag className={styles.list__imageNone} alt={title} />
+      )}
+
       <div className={styles.list__container}>
-        <Heading>{name}</Heading>
+        <Heading>{title}</Heading>
         <p className={styles.list__description}>{description}</p>
-        <Button
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.list__link}
-          href={twitterLink}
-        >
-          visit twitter page
-        </Button>
+        {link && (
+          <Button
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.list__link}
+            href={link}
+          >
+            {image ? `visit twitter page` : `visit article page`}
+          </Button>
+        )}
       </div>
     </li>
   );
 };
 
 ListItem.propTypes = {
-  name: PropTypes.string,
-  description: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   image: PropTypes.string,
-  twitterLink: PropTypes.string.isRequired,
+  link: PropTypes.string,
 };
 
 ListItem.defaultProps = {
-  description: "One of the React creators",
+  description: null,
   image: null,
 };
 

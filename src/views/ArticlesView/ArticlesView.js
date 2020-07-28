@@ -1,9 +1,10 @@
 import React from "react";
+import List from "../../components/List/List";
 import AppContext from "../../context";
 
 const ArticlesView = () => (
   <AppContext.Consumer>
-    {(context) => <p>Articles View {context.name}</p>}
+    {(context) => <List items={context.article} />}
   </AppContext.Consumer>
 );
 

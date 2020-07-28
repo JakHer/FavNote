@@ -30,6 +30,7 @@ I started this course to get basic knowledge about React. I gathered knowledge a
 - Conditional Rendering
 - React Router
 - Context API
+- React Dev Tools
 
 ## Setup
 
