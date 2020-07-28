@@ -10,31 +10,21 @@ import "./index.css";
 
 class Root extends React.Component {
   state = {
-    items: {
-      twitters: [],
-      articles: [],
-      notes: [],
-    },
+    twitter: [],
+    article: [],
+    note: [],
     isModalOpen: false,
   };
 
-  addItem = (e) => {
+  addItem = (e, newItem) => {
     e.preventDefault();
 
+    this.setState((prevState) => ({
+      [newItem.type]: [...prevState[newItem.type], newItem],
+    }));
     console.log("it works");
 
-    // const newItem = {
-    //   name: e.target[0].value,
-    //   twitterLink: e.target[1].value,
-    //   image: e.target[2].value,
-    //   description: e.target[3].value,
-    // };
-
-    // this.setState((prevState) => ({
-    //   items: [...prevState.items, newItem],
-    // }));
-
-    //   e.target.reset();
+    this.closeModal();
   };
 
   openModal = () => {

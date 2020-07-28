@@ -20,7 +20,7 @@ const DESCRIPTIONS = {
 
 class Form extends Component {
   state = {
-    activeOption: TYPES.twitter,
+    type: TYPES.twitter,
     title: ``,
     link: ``,
     image: ``,
@@ -29,7 +29,7 @@ class Form extends Component {
 
   handleRadioChange = (type) => {
     this.setState({
-      activeOption: type,
+      type: type,
     });
   };
 
@@ -47,21 +47,21 @@ class Form extends Component {
   };
 
   render() {
-    const { activeOption } = this.state;
+    const { type } = this.state;
     return (
       <AppContext.Consumer>
         {(context) => (
           <div className={styles.form__wrapper}>
-            <Heading form>Add new {DESCRIPTIONS[activeOption]}</Heading>
+            <Heading form>Add new {DESCRIPTIONS[type]}</Heading>
             <form
               className={styles.form}
               autoComplete="off"
-              onSubmit={context.addItem}
+              onSubmit={(e) => context.addItem(e, this.state)}
             >
               <div className={styles.form__radioWrapper}>
                 <Radio
                   id={TYPES.twitter}
-                  checked={activeOption === TYPES.twitter}
+                  checked={type === TYPES.twitter}
                   changeFn={() => this.handleRadioChange(TYPES.twitter)}
                   htmlFor={TYPES.twitter}
                 >
@@ -69,7 +69,7 @@ class Form extends Component {
                 </Radio>
                 <Radio
                   id={TYPES.article}
-                  checked={activeOption === TYPES.article}
+                  checked={type === TYPES.article}
                   changeFn={() => this.handleRadioChange(TYPES.article)}
                   htmlFor={TYPES.article}
                 >
@@ -77,7 +77,7 @@ class Form extends Component {
                 </Radio>
                 <Radio
                   id={TYPES.note}
-                  checked={activeOption === TYPES.note}
+                  checked={type === TYPES.note}
                   changeFn={() => this.handleRadioChange(TYPES.note)}
                   htmlFor={TYPES.note}
                 >
@@ -88,12 +88,10 @@ class Form extends Component {
                 onChange={this.handleInputChange}
                 value={this.state.title}
                 name="title"
-                label={
-                  activeOption === TYPES.twitter ? "Twitter Name" : "Title"
-                }
+                label={type === TYPES.twitter ? "Twitter Name" : "Title"}
                 maxLength={30}
               />
-              {activeOption === TYPES.twitter ? (
+              {type === TYPES.twitter ? (
                 <Input
                   onChange={this.handleInputChange}
                   value={this.state.image}
@@ -102,14 +100,12 @@ class Form extends Component {
                 />
               ) : null}
 
-              {activeOption !== TYPES.note ? (
+              {type !== TYPES.note ? (
                 <Input
                   onChange={this.handleInputChange}
                   value={this.state.link}
                   name="link"
-                  label={
-                    activeOption === TYPES.twitter ? "Twitter Link" : "Link"
-                  }
+                  label={type === TYPES.twitter ? "Twitter Link" : "Link"}
                 />
               ) : null}
 
