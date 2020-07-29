@@ -2,6 +2,10 @@
 
 > To refresh and organize knowledge about React library.
 
+##Link
+
+[Create React App](https://favnotes.netlify.app)
+
 ## What I have learned from this app
 
 - [General info](#about)
