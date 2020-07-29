@@ -10,8 +10,23 @@ import "./index.css";
 
 class Root extends React.Component {
   state = {
-    twitter: [],
-    article: [],
+    twitter: [
+      {
+        title: `My Twitter`,
+        description: `Feel free to add your Twitter :)`,
+        link: `https://twitter.com/kubahermyt`,
+        image: `https://pbs.twimg.com/profile_images/1214814747700404224/nivF7tNj_400x400.jpg`,
+        type: `twitter`,
+      },
+    ],
+    article: [
+      {
+        title: `GitHub Account`,
+        description: `You can visit my GitHub`,
+        link: `https://github.com/jakher`,
+        type: `article`,
+      },
+    ],
     note: [],
     isModalOpen: false,
   };
