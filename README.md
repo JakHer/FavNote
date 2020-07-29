@@ -1,5 +1,7 @@
 # React course from scratch
 
+![Image of Application](https://raw.githubusercontent.com/JakHer/FavNote/master/src/assets/images/siteScreenshoot.png)
+
 > To refresh and organize knowledge about React library.
 
 ## Link
