@@ -38,12 +38,6 @@ class Form extends Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    console.log(`
-    title: ${this.state.title},
-    description: ${this.state.description},
-    link: ${this.state.link},
-    image: ${this.state.image},
-    `);
   };
 
   render() {
@@ -67,6 +61,7 @@ class Form extends Component {
                 >
                   {TYPES.twitter}
                 </Radio>
+
                 <Radio
                   id={TYPES.article}
                   checked={type === TYPES.article}
@@ -75,6 +70,7 @@ class Form extends Component {
                 >
                   {TYPES.article}
                 </Radio>
+
                 <Radio
                   id={TYPES.note}
                   checked={type === TYPES.note}
@@ -115,7 +111,7 @@ class Form extends Component {
                 tag="textarea"
                 name="description"
                 label="Description"
-                maxLength={30}
+                maxLength={150}
               />
 
               <Button>add new item</Button>

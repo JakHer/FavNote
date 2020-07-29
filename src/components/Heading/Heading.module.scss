@@ -2,6 +2,7 @@
   color: rgba(30, 88, 255, 1);
   margin: 0;
   font-weight: 700;
+  padding: 0 10px;
 
   &__form {
     @extend .heading;
@@ -28,7 +29,7 @@
     &::before {
       z-index: -1;
       content: "";
-      background-color: rgba(30, 88, 255, 0.2);
+      background-color: rgba(203, 83, 130, 0.4);
       height: 30px;
       width: 50px;
       top: 0px;

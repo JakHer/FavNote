@@ -2,7 +2,7 @@ import React from "react";
 import ListItem from "./ListItem";
 import styles from "./List.module.scss";
 
-const ListWrapper = ({ items, type }) => (
+const ListWrapper = ({ items }) => (
   <>
     {items.length ? (
       <ul className={styles.list}>
