@@ -2,7 +2,7 @@
 
 > To refresh and organize knowledge about React library.
 
-##Link
+## Link
 
 [Create React App](https://favnotes.netlify.app)
 
